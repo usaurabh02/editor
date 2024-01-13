@@ -15,7 +15,7 @@ export const Playground = () => {
     <div className="w-full h-screen bg-black">
       <a-scene>
         <a-entity vr-mode-ui="enabled: true" cursor="rayOrigin: mouse;">
-          <a-sky id="360-image" src={bgImage}>
+          <a-sky id="360-image" src={bgImage} animation="easing: easeInOutSine">
             <a-image
               src={Hotspot}
               scale="1 1 1"
