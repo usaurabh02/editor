@@ -5,10 +5,11 @@ import Hotspot from "../asssets/icon.png";
 
 export const Playground = () => {
   const [bgImage, setBgImage] = useState(Saurabh);
+  const [showHotspot, setShowHotspot] = useState(true);
 
   const handleClick = () => {
-    console.log("done");
     setBgImage(Siddharth);
+    setShowHotspot(false);
   };
 
   return (
@@ -16,6 +17,7 @@ export const Playground = () => {
       <a-scene>
         <a-entity vr-mode-ui="enabled: true" cursor="rayOrigin: mouse;">
           <a-sky id="360-image" src={bgImage} animation="easing: easeInOutSine">
+          {showHotspot && (
             <a-image
               src={Hotspot}
               scale="1 1 1"
@@ -23,6 +25,7 @@ export const Playground = () => {
               rotation="90 120 0"
               onClick={handleClick}
             ></a-image>
+            )}
           </a-sky>
         </a-entity>
       </a-scene>
