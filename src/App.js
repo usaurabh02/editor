@@ -5,6 +5,7 @@ import { Playground } from "./components/Playground";
 import { Login } from "./components/Login"
 import { Signup } from "./components/Signup";
 import { Overlay } from "./components/Overlay";
+import { Meeting } from "./components/Meeting";
 
 function App() {
   
@@ -18,7 +19,8 @@ function App() {
           <>
           
             <Playground />
-            <Overlay />
+            <Meeting />
+            
           </>
         }
       />
